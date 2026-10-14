@@ -1533,14 +1533,14 @@ body {
     }
 
     .sidebar {
-        width: 100%;
+        width: 300px;
         flex: none;
         border-right: none;
         border-bottom: 1px solid rgba(180, 150, 255, 0.55);
     }
 
     .main-content {
-        width: 100%;
+        width: 600px;
         min-width: 0;
         padding: 15px;
     }
@@ -1554,11 +1554,11 @@ body {
     }
 
     .navigation a {
-        max-width: 100%;
+        max-width: 300px;
     }
 
     .main-content button {
-        max-width: 200%;
+        max-width: 500px;
     }
 }
 
