@@ -9,7 +9,3 @@ Schedules
 Planner
 Study Hub
 
-#Built with :
-HTML
-CSS
-JavaScript
