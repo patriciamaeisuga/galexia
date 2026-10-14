@@ -1507,7 +1507,7 @@ body {
 
 /* MOBILE LAYOUT */
 
-@media (max-width: 100px) {
+@media (max-width: 50px) {
     #study-hub .study-dashboard {
         grid-template-columns: repeat(3, minmax(0, 90px));
         width: 90px;
@@ -1526,39 +1526,181 @@ body {
 
 
 /* Mobile Responsive Design */
+
 @media screen and (max-width: 768px) {
 
     .website-layout {
         flex-direction: column;
+        width: 100%;
+        min-width: 0;
     }
 
     .sidebar {
-        width: 300px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
         flex: none;
         border-right: none;
         border-bottom: 1px solid rgba(180, 150, 255, 0.55);
     }
 
     .main-content {
-        width: 600px;
+        width: 100%;
+        max-width: 100%;
         min-width: 0;
         padding: 15px;
     }
 
-    .navigation {
+    .content-page {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .sidebar .navigation {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
         gap: 8px;
     }
 
-    .navigation a {
-        max-width: 300px;
+    .sidebar .navigation a {
+        width: auto;
+        max-width: 100%;
+        margin: 0;
     }
 
     .main-content button {
-        max-width: 500px;
+        max-width: 100%;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0;
+        gap: 12px;
+    }
+
+    .button-container button,
+    .button-container .planner-btn,
+    .button-container .calendar-btn,
+    .button-container .notes-btn,
+    .button-container .tasks-btn,
+    .button-container .schedules-btn,
+    .button-container .document-btn,
+    .button-container .documents-btn,
+    .button-container .budget-tracker-btn,
+    .button-container .study-hub-btn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
     }
 }
 
+@media screen and (max-width: 380px) {
+    .button-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+/* MOBILE CONTAINER SIZE FIX */
+@media screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .website-layout,
+    .main-content,
+    .content-page,
+    #home-dashboard,
+    #calendar,
+    #notes,
+    #tasks,
+    #schedules,
+    #planner,
+    #documents,
+    #budget-tracker,
+    #study-hub {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .button-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0;
+        gap: 12px;
+    }
+
+    .button-container button,
+    .button-container .planner-btn,
+    .button-container .calendar-btn,
+    .button-container .notes-btn,
+    .button-container .tasks-btn,
+    .button-container .schedules-btn,
+    .button-container .document-btn,
+    .button-container .documents-btn,
+    .button-container .budget-tracker-btn,
+    .button-container .study-hub-btn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #notes .notes-container,
+    #tasks .tasks-container,
+    #schedules .schedules-container,
+    #planner .planner-container,
+    #documents .documents-container,
+    #budget-tracker .budget-container,
+    #study-hub .study-section,
+    #study-hub .study-dashboard {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #study-hub .study-dashboard {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #study-hub .study-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .button-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
