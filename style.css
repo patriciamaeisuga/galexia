@@ -1523,3 +1523,42 @@ body {
         grid-template-columns: minmax(0, 200px);
     }
 }
+
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+
+    .website-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(180, 150, 255, 0.55);
+    }
+
+    .main-content {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .navigation a {
+        max-width: 100%;
+    }
+
+    .main-content button {
+        max-width: 100%;
+    }
+}
+
