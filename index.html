@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALEXIA ☘</title>
+</head>
+
+
+
+<body>
+
+
+<div class="website-layout">
+
+<aside class="sidebar">
+  
+
+<p class="nav-title">Galexia ☘</p>
+
+<nav class="navigation">
+  <a href="#home" data-page="home">Home</a>
+  <a href="#calendar" data-page="calendar">Calendar</a>
+  <a href="#notes" data-page="notes">Notes</a>
+  <a href="#tasks" data-page="tasks">Tasks</a>
+  <a href="#schedules" data-page="schedules">Schedules</a>
+  <a href="#planner" data-page ="planner">Planner</a>
+  <a href="#documents" data-page ="documents">Documents</a>
+  <a href="#budget-tracker" data-page="budget-tracker">Budget-Tracker</a>
+  <a href="#study-hub" data-page="study-hub">Study Hub</a>
+</nav>
+
+</aside>
+  
+<main class="main-content">
+
+
+<section id="home-dashboard">
+
+    <header class="page-header">
+        <h1>Explore your Universe</h1>
+        <p>One digital space for everything you're working toward.</p>
+    </header>
+
+    <div class="button-container">
+
+        <button type="button" class="calendar-btn" data-page="calendar">
+            <strong>⭐ Calendar</strong>
+            <p>Keep track of your days</p>
+        </button>
+
+        <button type="button" class="notes-btn" data-page="notes">
+            <strong>🪐 Notes</strong>
+            <p>Little thoughts, saved here</p>
+        </button>
+
+        <button type="button" class="tasks-btn" data-page="tasks">
+            <strong>🌠 Tasks</strong>
+            <p>One step at a time</p>
+        </button>
+
+        <button type="button" class="schedules-btn" data-page="schedules">
+            <strong>💫 Schedules</strong>
+            <p>Make time for what matters</p>
+        </button>
+
+        <button type="button" class="planner-btn" data-page="planner">
+            <strong>🌌 Planner</strong>
+            <p>Dream it, plan it, do it</p>
+        </button>
+
+        <button type="button" class="documents-btn" data-page="documents">
+            <strong>✨ Documents</strong>
+            <p>Keep your important files organized.</p>
+        </button>
+
+        <button type="button" class="budget-tracker-btn" data-page="budget-tracker">
+            <strong>🛰 Budget Tracker</strong>
+            <p>Track and manage your money.</p>
+        </button>
+
+        <button type="button" class="study-hub-btn" data-page="study-hub">
+            <strong>📖 Study Hub</strong>
+            <p>Your space to learn, review, and grow.</p>
+        </button>
+
+    </div>
+</section>
+
+
+
+<section class="content-page" id="calendar">
+
+    
+
+    <h1> My Calendar</h1>
+    
+   <div class="calendar-container">
+    
+
+        <div class="calendar-header">
+            <button id="prev-month" type="button">❮</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month" type="button">❯</button>
+        </div>
+
+        <div class="calendar-weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+
+        <div class="calendar-days" id="calendar-days">
+
+    </div>
+
+</section>
+
+
+
+<section class="content-page" id="notes">
+
+
+    <h1> My Notes</h1>
+    
+    <div class="notes-container">
+
+        <label for="note-title">Note Title</label>
+        <input
+            type="text"
+            id="note-title"
+            placeholder="e.g. My Personal Notes"
+        >
+
+        <label for="note-content">Your Note</label>
+        <textarea
+            id="note-content"
+            placeholder="Write something here..."
+            rows="6"
+        ></textarea>
+
+        <button id="save-note-btn"> Save Note</button>
+
+        <div class="saved-notes">
+            <h2>Saved Notes</h2>
+            <div id="notes-list"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="content-page" id="tasks">
+
+
+
+    <h1> My Tasks</h1><div class="tasks-container">
+    <p>One step at a time. Every little progress counts.</p>
+
+    <div class="task-input-container">
+
+            <input
+                type="text"
+                id="task-input"
+                placeholder="What do you need to do?"
+            >
+
+            <button type="button" id="add-task-btn">
+                + Add Task
+            </button>
+        </div>
+
+        <div class="task-summary">
+            <span id="task-count">0 tasks remaining</span>
+        </div>
+
+        <div id="task-list"></div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="content-page" id="schedules">
+
+    <h1> My Schedules</h1>
+    <p>Make time for what matters.</p>
+
+    <div class="schedules-container">
+
+        <div class="schedule-form">
+
+            <label for="schedule-title">Schedule Title</label>
+            <input
+                type="text"
+                id="schedule-title"
+                placeholder="what's upcoming?"
+            >
+
+            <label for="schedule-date">Date</label>
+            <input type="date" id="schedule-date">
+
+            <label for="schedule-time">Time</label>
+            <input type="time" id="schedule-time">
+
+            <label for="schedule-description">Description (optional)</label>
+            <textarea
+                id="schedule-description"
+                rows="3"
+                placeholder="Add some details..."
+            ></textarea>
+
+            <button type="button" id="add-schedule-btn">
+                 Add Schedule
+            </button>
+
+        </div>
+
+        <div class="saved-schedules">
+            <h2>Upcoming Schedules</h2>
+            <div id="schedules-list"></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="content-page" id="planner">
+    <h1> My Planner</h1>
+    <p>Dream it, plan it, do it.</p>
+
+    <div class="planner-container">
+        <div class="planner-form">
+            <label for="planner-title">Plan Title</label>
+            <input type="text" id="planner-title" placeholder="e.g. My Study Goals">
+
+            <label for="planner-date">Target Date</label>
+            <input type="date" id="planner-date">
+
+            <label for="planner-details">Plan Details</label>
+            <textarea id="planner-details" rows="4"
+                placeholder="What do you want to accomplish?"></textarea>
+
+            <button type="button" id="add-plan-btn"> Add Plan</button>
+        </div>
+
+        <div class="saved-plans">
+            <h2>My Plans</h2>
+            <div id="planner-list"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="content-page" id="documents">
+    <h1> My Documents</h1>
+    <p>Your personal space for files, notes, and important documents.</p>
+
+    <div class="documents-container">
+        <div class="upload-area">
+            <h2>📂 Upload Your Files</h2>
+            <p>Store your PDFs, Word files, PowerPoint presentations, and more.</p>
+
+            <label for="document-upload" class="upload-btn">
+                ＋ Choose Files
+            </label>
+
+            <input
+                type="file"
+                id="document-upload"
+                multiple
+                accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.jpg,.jpeg,.png"
+            >
+
+            <p class="file-hint">
+                PDF,  DOCX,  PPTX,  XLSX,  TXT,  JPG,  PNG
+            </p>
+        </div>
+
+        <div class="documents-library">
+            <h2> My File Library</h2>
+
+            <div id="documents-list">
+                <p class="empty-documents">
+                    No files added yet. Upload your first document!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="content-page" id="budget-tracker">
+    <h1> My Budget Tracker</h1>
+    <p>Track your money, manage your needs, and save for your goals.</p>
+
+    <div class="budget-container">
+
+        <div class="budget-summary">
+            <div class="budget-card income-card">
+                <span>💰 Total Income</span>
+                <h2 id="total-income">₱0.00</h2>
+            </div>
+
+            <div class="budget-card expense-card">
+                <span>💸 Total Expenses</span>
+                <h2 id="total-expenses">₱0.00</h2>
+            </div>
+
+            <div class="budget-card balance-card">
+                <span>🌌 Remaining Balance</span>
+                <h2 id="remaining-balance">₱0.00</h2>
+            </div>
+        </div>
+
+        <div class="budget-form">
+            <h2>✨ Add Transaction</h2>
+
+            <label for="transaction-title">Description</label>
+            <input type="text" id="transaction-title"
+                   placeholder="e.g. Weekly allowance">
+
+            <label for="transaction-amount">Amount (₱)</label>
+            <input type="number" id="transaction-amount"
+                   placeholder="e.g. 500" min="0.01" step="0.01">
+
+            <label for="transaction-type">Transaction Type</label>
+            <select id="transaction-type">
+                <option value="income">Income / Allowance</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <label for="transaction-category">Category</label>
+            <select id="transaction-category">
+                <option value="Allowance">Allowance</option>
+                <option value="Salary">Salary / Work</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="School">School</option>
+                <option value="Bills">Bills</option>
+                <option value="Savings">Savings</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="transaction-date">Date</label>
+            <input type="date" id="transaction-date">
+
+            <button type="button" id="add-transaction-btn">
+                ＋ Add Transaction
+            </button>
+        </div>
+
+        <div class="transactions-section">
+            <h2>📜 Transaction History</h2>
+            <div id="transactions-list"></div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="content-page" id="study-hub">
+
+    <!-- STUDY HUB HEADER -->
+    <header class="study-header">
+        <h1> My Study Hub</h1>
+        <p>Your space to learn, organize, and grow.</p>
+    </header>
+
+    <!-- FEATURE CARDS -->
+    <div class="study-dashboard">
+
+        <div class="study-card">
+            <span>📚</span>
+            <h2>My Subjects</h2>
+            <p>Organize your subjects and learning topics.</p>
+            <a href="#my-subjects">Explore Subjects ↓</a>
+        </div>
+
+        <div class="study-card">
+            <span>📝</span>
+            <h2>Reviewers &amp; Summaries</h2>
+            <p>Save your notes, summaries, and important lessons.</p>
+            <a href="#my-reviewers">Open Reviewers ↓</a>
+        </div>
+
+        <div class="study-card">
+            <span>💻</span>
+            <h2>Learning Materials</h2>
+            <p>Keep useful links, tutorials, and resources in one place.</p>
+            <a href="#my-materials">View Materials ↓</a>
+        </div>
+
+    </div>
+
+    <!-- MY SUBJECTS -->
+    <section class="study-section" id="my-subjects">
+        <h2>📚 My Subjects</h2>
+        <p>Add and organize any subject you are currently studying.</p>
+
+        <form class="study-form vertical-form" id="subject-form">
+            <label for="subject-name">Subject Name</label>
+            <input
+                type="text"
+                id="subject-name"
+                placeholder="e.g. Mathematics, History, Biology"
+                required
+            >
+
+            <label for="subject-description">Description (optional)</label>
+            <textarea
+                id="subject-description"
+                rows="3"
+                placeholder="What is this subject about?"
+            ></textarea>
+
+            <button type="submit">＋ Add Subject</button>
+        </form>
+
+        <div id="subjects-list" class="study-list"></div>
+    </section>
+
+    <!-- REVIEWERS AND SUMMARIES -->
+    <section class="study-section" id="my-reviewers">
+        <h2>📝 Reviewers &amp; Summaries</h2>
+        <p>Keep important information and lesson notes organized.</p>
+
+        <form class="study-form vertical-form" id="reviewer-form">
+            <label for="reviewer-title">Title</label>
+            <input
+                type="text"
+                id="reviewer-title"
+                placeholder="e.g. Chapter 1 Reviewer"
+                required
+            >
+
+            <label for="reviewer-subject">Subject (optional)</label>
+            <input
+                type="text"
+                id="reviewer-subject"
+                placeholder="Which subject does this belong to?"
+            >
+
+            <label for="reviewer-content">Notes or Summary</label>
+            <textarea
+                id="reviewer-content"
+                rows="6"
+                placeholder="Write your notes or lesson summary here..."
+                required
+            ></textarea>
+
+            <button type="submit">💾 Save Reviewer</button>
+        </form>
+
+        <div id="reviewers-list" class="study-list"></div>
+    </section>
+
+    <!-- LEARNING MATERIALS -->
+    <section class="study-section" id="my-materials">
+        <h2>💻 Learning Materials</h2>
+        <p>Save links to helpful websites, videos, and online resources.</p>
+
+        <form class="study-form vertical-form" id="material-form">
+            <label for="material-title">Resource Title</label>
+            <input
+                type="text"
+                id="material-title"
+                placeholder="e.g. Introduction to Science"
+                required
+            >
+
+            <label for="material-type">Resource Type</label>
+            <select id="material-type" required>
+                <option value="Website">Website</option>
+                <option value="Video Lesson">Video Lesson</option>
+                <option value="Online Tutorial">Online Tutorial</option>
+                <option value="PDF / Document">PDF / Document</option>
+                <option value="E-book">E-book</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="material-url">Resource Link</label>
+            <input
+                type="url"
+                id="material-url"
+                placeholder="https://example.com"
+                required
+            >
+
+            <button type="submit">＋ Save Material</button>
+        </form>
+
+        <div id="materials-list" class="study-list"></div>
+    </section>
+
+</section>
+
+
+
+  </main>
+  
+</div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
